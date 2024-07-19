@@ -1,0 +1,256 @@
+$width:calc(var(--width-95) - 5.5rem)
+$row:var(--row-50)
+$diplay:var(--flex-to-none-50)
+$btnMenuDiplay:var(--none-to-flex-50)
+
+$primaryColor:rgb(70, 147, 255)
+$secoundaryColor:rgb(255, 126, 223)
+$primaryColorDark:rgb(3, 87, 206)
+$base1:rgba(123, 123, 123, 0.999)
+$radius: 0.3rem
+
+
+.primaryColor
+    color: $primaryColor
+    
+.secoundaryColor
+    color: $secoundaryColor
+
+.primaryColorDark
+    color: $primaryColorDark
+*
+    position: relative
+
+    
+
+@mixin pos()
+
+    display: flex
+    flex-direction: $row
+
+@mixin centerX()
+
+    display: flex
+    flex-direction: $row
+    margin: auto
+
+@mixin centerY()
+
+    display: flex
+    flex-direction: $row
+    align-items: center
+
+@mixin space()
+
+    display: flex
+    flex-direction: $row
+    justify-content: space-between
+
+body
+    overflow-x: hidden
+
+body main
+    position: absolute
+    width: 100vw
+    top: 0
+
+body main section,footer
+    width: $width
+    margin: auto
+    text-align: justify
+
+header.menu
+    width: 100vw
+    z-index: 100000000000000000000000000
+    position: fixed
+    background: white
+
+menu
+    top: 0
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    width: $width
+    margin: auto
+
+    logo
+        display: flex
+        text-align: center
+        padding: 1rem 0
+        font: bold 2rem times
+        color: $primaryColor
+
+        .icon
+          font-size: 2rem
+          color: $primaryColor
+          background: white
+    
+    ul
+        @include pos
+        align-self: center
+        padding: 1rem 0
+        display: $diplay
+    
+        li
+            padding: .1rem 1rem
+            text-align: center
+            color: $secoundaryColor
+            font: bold 1.1rem arial
+
+    .btn-menu
+       display: $btnMenuDiplay
+
+       .icon
+        font-size: 2rem
+        color: $secoundaryColor
+        background: white
+       
+
+.all
+    width: 100vw
+
+section.cover
+    width: 100vw
+    height: 60rem
+    background-image: linear-gradient(rgba(0, 0, 0, 0.738),rgba(0, 0, 0, 0.129)),url("http://kidspace.vercel.app/img0")
+    background-position: center 2rem
+    background-size: cover
+    background-attachment: fixed
+    margin: auto 
+    margin-top: 4rem
+    margin-bottom: 2rem
+
+    div
+        color: white
+        margin: auto 
+
+        h1,p
+        width: $width
+        padding: .5rem
+        text-align: center
+        h1
+            color: $primaryColor
+            font: bold 7rem times
+            letter-spacing: -.45rem
+
+        h2
+            color: $secoundaryColor
+            padding: 3rem 0 0 0
+            font: normal 2rem arial
+
+        p
+            width: calc(var(--width-45) - 5.5rem)
+            padding: 1rem 0
+            font: normal 1.15rem arial
+            text-align: justify
+            margin: auto
+            color: white
+.btn
+    
+    height: auto
+    padding: 1.5rem 5rem
+    margin: 5rem auto
+    font: bold 1.15rem arial
+    text-align: center
+    border-radius: 10rem
+    background: $primaryColorDark
+    color: $primaryColor
+
+nav.first
+    display: inline-block
+    width: $width 
+    font: normal 1.1rem arial
+    color: $base1
+
+    img
+       display: inline-block
+       float: left
+       width: calc(var(--width-35) - 5.5rem)
+       margin: 0 2rem 1rem 0
+       
+.about-us
+    color: $secoundaryColor
+    font: bold 3rem times
+    padding: .5rem 0
+       
+img
+    padding: 1rem 0
+
+.subtitle
+    color: $secoundaryColor
+    font: bold 3rem times
+    
+p
+    padding: 1rem 0
+    font: normal 1.1rem arial
+    color: $base1
+
+.roundabout
+    width: $width
+    background: rgba(0,0 ,0 ,0 )
+    height: 30rem
+    overflow: hidden
+    margin: 1rem auto
+    padding: 0
+    border-radius: $radius
+
+    nav
+        position: absolute
+        top: 0rem
+        overflow: scroll
+        width: calc($width + 1rem)
+        height: 31rem
+        margin: 0
+        padding: 0
+        border-radius: $radius
+
+        div
+            width: auto
+            display: flex
+            flex-direction: row
+            height: 30rem
+            margin: 0
+            padding: 0
+
+            img 
+                border-radius: $radius
+                width: var(--width-40)
+                height: 30rem
+                padding: 0
+            
+            .roundaboutImgFirst
+                width: var(--width-40)
+                margin: 0 1rem 0 0
+
+            .roundaboutImg
+                margin: 0 1rem
+
+.phrase
+    div
+        display: flex
+        align-content: center
+        justify-content: center
+        height: 25rem
+        margin: 1rem 0
+        background-image: linear-gradient(rgba(0, 0, 0, 0.507),rgba(0, 0, 0, 0.096)), url("http://kidspace.vercel.app/img11")
+        background-repeat: no-repeat
+        background-position: 0 20rem 
+        background-attachment: fixed
+        background-size: cover
+        box-sizing: border-box
+        padding: 0 14vw
+        text-align: center
+        font: bold 2.5rem times
+        color: white               
+
+footer
+
+    logo
+      margin: auto
+      text-align: center
+      color: $secoundaryColor
+      padding: 1rem
+
+      i
+        font-size: 1.5rem
